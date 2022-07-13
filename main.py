@@ -1,6 +1,8 @@
 """ Rock, paper, scissors game"""
 
 from functions import *
+from datetime import datetime
+from time import sleep
 
 
 # main

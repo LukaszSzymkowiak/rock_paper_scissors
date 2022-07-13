@@ -1,6 +1,4 @@
 from random import *
-from datetime import datetime
-from time import sleep
 
 
 # game time
@@ -13,7 +11,14 @@ def game():
     equipment = {"r": "rock", "p": "paper", "s": "scissors"}
     user_points = 0
     computer_points = 0
-    n = int(input("Set max points for game: "))
+    while True:
+        try:
+            n = int(input("Set max points for game: "))
+            if n:
+                break
+        except ValueError:
+            print("Type a number")
+
     while user_points < n and computer_points < n:
         print(f"Points\n"
               f"User: {user_points}\n"
